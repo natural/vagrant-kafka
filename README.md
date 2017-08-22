@@ -1,3 +1,36 @@
+Local Setup and Usage
+=============
+
+First:
+
+	$ git clone git@github.com:natural/vagrant-kafka.git
+	$ cd vagrant-kafka
+
+Next, before you create your VM, go to
+http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+and download the file `jdk-8u144-linux-x64.rpm`, and put it in the
+`rpm` directory of this checkout.  The init script should do this, but it's busted ATM.
+
+After you've got that rpm, do this:
+
+	$ vagrant up
+	$ vagrant ssh
+	$ cd kafka*
+    $ ./bin/kafka-topics.sh --create --zookeeper 127.0.0.1:2181/kafka --replication-factor 1 --partitions 1 --topic xyz
+	$ ./bin/kafka-topics.sh --list --zookeeper 127.0.0.1:2181/kafka
+	xyz
+
+If you get the `xyz` echoed at the end, boom, you're done.
+
+About This Fork
+=============
+
+This is a quick and dirty hack on the original.  The Vagrantfile and
+various scripts have been tweaked to use just one VM.
+
+The tweaks also include using '/kafka' as the ZK path for The original
+readme follows.
+
 Vagrant - Kafka
 =============
 

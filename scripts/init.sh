@@ -12,7 +12,7 @@ if [ ! -f  $KAFKA_TARGET/$KAFKA_NAME.tgz ]; then
    wget -O "$KAFKA_TARGET/$KAFKA_NAME.tgz" http://apache.claz.org/kafka/"$KAFKA_VERSION/$KAFKA_NAME.tgz"
 fi
 
-JDK_VERSION="jdk-8u73-linux-x64"
+JDK_VERSION="jre-8u144-linux-x64"
 JDK_RPM="$JDK_VERSION.rpm"
 
 if [ ! -f /vagrant/rpm/$JDK_RPM ]; then
