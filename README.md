@@ -22,6 +22,12 @@ After you've got that rpm, do this:
 
 If you get the `xyz` echoed at the end, boom, you're done.
 
+The networking config is a little different, but you can bring all ports local easily:
+
+	$ vagrant ssh -- -L 2181:localhost:2181 -L 9092:10.30.3.30:9092
+
+Once you run this, you can refer to kafka and zookeeper on localhost (host and guest).
+
 About This Fork
 =============
 
