@@ -7,8 +7,8 @@ First:
 	$ cd vagrant-kafka
 
 Next, before you create your VM, go to
-http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
-and download the file `jdk-8u144-linux-x64.rpm`, and put it in the
+http://www.oracle.com/technetwork/es/java/javase/downloads/jre8-downloads-2133155.html?printOnly=1
+and download the file `jre-8u144-linux-x64`, and put it in the
 `rpm` directory of this checkout.  The init script should do this, but it's busted ATM.
 
 After you've got that rpm, do this:
